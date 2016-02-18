@@ -44,7 +44,7 @@ public class MatchResultToJson {
 			geometry.put("type", "LineString");
 			
 			EdgeMatch edgeMatch = result.getEdgeMatches().get(emIndex);
-			PointList pointList = edgeMatch.getEdgeState().fetchWayGeometry(emIndex == 0 ? 3 : 2);
+			PointList pointList = edgeMatch.getEdgeState().fetchWayGeometry(3);
 			geometry.put("coordinates", pointList.toGeoJson());
 			
 			link.put("id", edgeMatch.getEdgeState().getEdge());
