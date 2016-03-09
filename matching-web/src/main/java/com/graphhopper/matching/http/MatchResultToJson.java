@@ -22,7 +22,6 @@ import com.graphhopper.util.PointList;
  * </pre>
  */
 public class MatchResultToJson {
-
   protected MatchResult result;
 
   public MatchResultToJson(MatchResult result) {
@@ -35,7 +34,6 @@ public class MatchResultToJson {
     JSONArray entries = new JSONArray();
     JSONObject route = new JSONObject();
     JSONArray links = new JSONArray();
-
     for (int emIndex = 0; emIndex < result.getEdgeMatches().size(); emIndex++) {
       JSONObject link = new JSONObject();
       JSONObject geometry = new JSONObject();
